@@ -523,15 +523,54 @@
   }
 
   @media (max-width: 600px) {
-    .header { padding: 28px 24px; }
-    .stats-strip { padding: 16px 24px; gap: 0; }
-    .body { padding: 28px 24px; }
-    .what-grid { grid-template-columns: 1fr; }
-    .curriculum-grid { grid-template-columns: 1fr 1fr; }
-    .info-two-col { grid-template-columns: 1fr; }
-    .contact-strip { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
-    .footer { padding: 14px 24px; }
-    .header-top { flex-direction: column; gap: 10px; }
+    /* Header */
+    .header { padding: 24px 20px 22px; }
+    .header-top { flex-direction: column; gap: 8px; }
+    .brand-name { font-size: 28px; }
+    .header-headline { font-size: 16px; }
+    .doc-badge { font-size: 10px; padding: 5px 12px; }
+
+    /* Stats strip */
+    .stats-strip { padding: 12px 16px; flex-wrap: wrap; }
+    .stat { flex: 1 1 40%; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 8px 10px; }
+    .stat:nth-child(odd) { border-left: 1px solid rgba(255,255,255,0.1); }
+    .stat-num { font-size: 20px; }
+    .stat-label { font-size: 10px; }
+
+    /* Body */
+    .body { padding: 22px 16px; }
+    .section { margin-bottom: 28px; }
+    .section-title { font-size: 15px; }
+
+    /* Cards */
+    .what-grid { grid-template-columns: 1fr; gap: 10px; }
+    .info-two-col { grid-template-columns: 1fr; gap: 10px; }
+    .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .cur-item { padding: 7px 10px; }
+    .cur-name { font-size: 11px; }
+
+    /* Kit box */
+    .kit-box { flex-direction: column; padding: 18px 16px; gap: 16px; }
+    .kit-photo { width: 100%; max-width: 320px; align-self: center; }
+    .kit-title { font-size: 14px; }
+    .kit-desc { font-size: 12px; }
+    .kit-bullet { font-size: 12px; }
+
+    /* Values */
+    .value-row { padding: 10px 12px; }
+    .value-title { font-size: 13px; }
+    .value-desc { font-size: 12px; }
+
+    /* Steps */
+    .step-title { font-size: 13px; }
+    .step-desc { font-size: 12px; }
+
+    /* Contact */
+    .contact-strip { padding: 18px 16px; flex-direction: column; align-items: flex-start; gap: 14px; }
+    .contact-val { font-size: 13px; }
+
+    /* Footer */
+    .footer { padding: 12px 16px; flex-direction: column; gap: 4px; text-align: center; align-items: center; }
   }
 </style>
 </head>
