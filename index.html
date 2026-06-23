@@ -534,54 +534,103 @@
   }
 
   @media (max-width: 600px) {
-    /* Header */
-    .header { padding: 24px 20px 22px; }
-    .header-top { flex-direction: column; gap: 8px; }
-    .brand-name { font-size: 28px; }
-    .header-headline { font-size: 16px; }
-    .doc-badge { font-size: 10px; padding: 5px 12px; }
+    /* ── HEADER ── */
+    .header { padding: 22px 16px 20px; }
+    .header-top {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .brand-block { flex: 1; min-width: 0; }
+    .brand-name { font-size: 24px; }
+    .brand-tagline { font-size: 11px; }
+    .doc-badge { font-size: 10px; padding: 4px 10px; white-space: nowrap; }
 
-    /* Stats strip */
-    .stats-strip { padding: 12px 16px; flex-wrap: wrap; }
-    .stat { flex: 1 1 40%; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 8px 10px; }
+    /* Stamp – shrink a bit on mobile */
+    .stamp { width: 72px; height: 72px; }
+    .stamp-circle { width: 72px; height: 72px; }
+    .stamp-line1 { font-size: 8.5px; }
+    .stamp-line2 { font-size: 8px; }
+    .stamp-line3 { font-size: 9.5px; }
+    .stamp-divider { width: 38px; margin: 3px 0; }
+
+    .header-headline { font-size: 15px; }
+
+    /* ── STATS ── */
+    .stats-strip { padding: 10px 12px; flex-wrap: wrap; }
+    .stat { flex: 1 1 40%; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 8px 6px; }
     .stat:nth-child(odd) { border-left: 1px solid rgba(255,255,255,0.1); }
-    .stat-num { font-size: 20px; }
-    .stat-label { font-size: 10px; }
+    .stat-num { font-size: 18px; }
+    .stat-label { font-size: 9.5px; }
 
-    /* Body */
-    .body { padding: 22px 16px; }
-    .section { margin-bottom: 28px; }
+    /* ── BODY ── */
+    .body { padding: 18px 14px; }
+    .section { margin-bottom: 24px; }
     .section-title { font-size: 15px; }
 
-    /* Cards */
+    /* ── IMAGES – stack above text on mobile ── */
+    .model-float {
+      flex-direction: column !important;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .model-float img {
+      width: 160px !important;
+      max-width: 160px;
+      margin: 0 auto;
+      display: block;
+      padding-top: 0 !important;
+    }
+    .img-catapult,
+    .img-drill,
+    .img-crane { padding-top: 0 !important; }
+
+    .model-float-text { width: 100%; }
+
+    /* ── CARDS ── */
     .what-grid { grid-template-columns: 1fr; gap: 10px; }
-    .info-two-col { grid-template-columns: 1fr; gap: 10px; }
+    .what-card { padding: 13px 14px; }
+    .what-card-title { font-size: 13px; }
+    .what-card-text { font-size: 12px; }
+
+    .info-two-col { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .info-card { padding: 13px 12px; }
+    .info-card-main { font-size: 17px; }
+    .info-card-sub { font-size: 11px; }
+
     .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
     .cur-item { padding: 7px 10px; }
     .cur-name { font-size: 11px; }
+    .curriculum-note { font-size: 11px; }
 
-    /* Kit box */
-    .kit-box { flex-direction: column; padding: 18px 16px; gap: 16px; }
-    .kit-photo { width: 100%; max-width: 320px; align-self: center; }
+    /* ── KIT BOX ── */
+    .kit-box { flex-direction: column; padding: 18px 14px; gap: 14px; }
+    .kit-photo { width: 100%; max-width: 280px; align-self: center; }
     .kit-title { font-size: 14px; }
     .kit-desc { font-size: 12px; }
     .kit-bullet { font-size: 12px; }
 
-    /* Values */
+    /* ── VALUES ── */
     .value-row { padding: 10px 12px; }
     .value-title { font-size: 13px; }
     .value-desc { font-size: 12px; }
 
-    /* Steps */
+    /* ── STEPS ── */
     .step-title { font-size: 13px; }
     .step-desc { font-size: 12px; }
 
-    /* Contact */
-    .contact-strip { padding: 18px 16px; flex-direction: column; align-items: flex-start; gap: 14px; }
+    /* ── QUOTE ── */
+    .quote-block { padding: 14px 16px; }
+    .quote-text { font-size: 13px; }
+
+    /* ── CONTACT ── */
+    .contact-strip { padding: 16px 14px; flex-direction: column; align-items: flex-start; gap: 12px; }
     .contact-val { font-size: 13px; }
 
-    /* Footer */
-    .footer { padding: 12px 16px; flex-direction: column; gap: 4px; text-align: center; align-items: center; }
+    /* ── FOOTER ── */
+    .footer { padding: 12px 14px; flex-direction: column; gap: 4px; text-align: center; align-items: center; }
   }
 
   /* MODEL FLOAT */
@@ -600,10 +649,7 @@
   }
   .model-float-text { flex: 1; }
 
-  @media (max-width: 600px) {
-    .model-float { flex-direction: column; gap: 14px; }
-    .model-float img { width: 100%; max-width: 220px; margin: 0 auto; display: block; }
-  }
+  /* model-float mobile handled in main media query */
 
 
   /* Flyer-inspired decorative elements */
